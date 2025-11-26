@@ -1,0 +1,96 @@
+############################################################
+
+Quiz02_01: 50 points
+(FnA1szLongestMonoSubsequence)
+Please state the status of this question:
+1. Incomplete
+2. Solved with testing? yes
+3. Solved without testing? 
+If solved, please BRIEFLY explain your strategy.
+I used a O(n^2) dynamic programming idea. so for each position i, l look back at all before positions j. in which (xs[ j ] <= xs[ i ]), 
+and I extend the best subsequence that that ends at j, so if two subsequences have the same length I choose the one that is smaller so 
+the final answer is the leftmost.
+  
+############################################################
+
+Quiz02_02: 50 points
+(sort1000WithNoRecursion)
+Please state the status of this question:
+1. Incomplete
+2. Solved with testing? yes
+3. Solved without testing?
+If solved, please BRIEFLY explain your strategy.
+I did quicksort without recursion. I used my own stack to keep track of which parts of the array still need sorting. so 
+for each range i partition it around a pivot then i push the two new ranges back on the stack.
+
+############################################################
+
+Quiz02_03: 50 points
+(Soduku_dfs_solve and Soduku_bfs_solve)
+Please state the status of this question:
+1. Incomplete
+2. Solved with testing? yes
+3. Solved without testing?
+If solved, please BRIEFLY explain your strategy.
+I had each sudoku board as a node in a tree. from any board I made new boards by filling the next empty spot with any valid number.
+so for dfs i used a stack and for bfs I used a queue. and whenever a board had no empty cells i counted it as a solution.
+############################################################
+
+Please choose only ONE from Quiz02_04 and Quiz02_05.
+If unspecified, I assume by default that Quiz02_04 is
+chosen.
+
+############################################################
+
+Quiz02_04:
+30 points plus up to 20 bonus points
+(isAVL and genAVLBST)
+Please state the status of this question:
+1. Incomplete
+2. Solved with testing? yes
+3. Solved without testing?
+If solved, please BRIEFLY explain your strategy.
+so for isAVL i used one recursive helper which checks each node’s balance and returns its height and 
+if anything is off it returns -1 and i only pass through the tree once. For genAVLBST i explained my answer.
+
+############################################################
+
+Quiz02_05:
+30 points plus up to 20 bonus points
+(isRBT and genRedBlackBST)
+Please state the status of this question:
+1. Incomplete
+2. Solved with testing?
+3. Solved without testing?
+If solved, please BRIEFLY explain your strategy.
+
+############################################################
+
+Quiz02_06: 50 points
+(reroot and insert on DBST)
+Please state the status of this question:
+1. Incomplete
+2. Solved with testing? yes
+3. Solved without testing? 
+If solved, please BRIEFLY explain your strategy.
+so for insert i  did a regular bst insert and updated the parent pointers 
+and subtree sizes as i went down. and for reroot i pick a random node using 
+the sizes and then rotate it up until it becomes the root.
+
+############################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
