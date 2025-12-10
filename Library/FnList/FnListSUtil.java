@@ -2,6 +2,7 @@ package Library.FnList;
 
 import Library.FnList.*;
 import Library.FnA1sz.*;
+import Library.LnStrm.*;
 import Library.MyRefer.*;
 
 import java.util.Random;
@@ -18,6 +19,10 @@ public class FnListSUtil {
     public static<T>
 	FnList<T> nil() {
 	return new FnList<T>();
+    }
+    public static<T>
+	FnList<T> sing(T x0) {
+	return cons(x0, nil());
     }
     public static<T>
 	FnList<T>
@@ -78,6 +83,19 @@ public class FnListSUtil {
 	    xs = cons(rand.nextInt(), xs);
 	}
 	return xs;
+    }
+//
+    public static<T>
+	LnStrm<T> strmize(FnList<T> xs) {
+	return new LnStrm<T>(
+          () -> {
+	      if (xs.nilq()) {
+		  return new LnStcn<T>();
+	      } else {
+		  return new LnStcn<T>(xs.hd(), strmize(xs.tl()));
+	      }
+	  }
+        );
     }
 //
     public static<T,R>

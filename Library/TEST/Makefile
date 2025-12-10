@@ -46,5 +46,30 @@ $(JAVA) -cp .::./../Library.jar LnListTest
 LnListTest.class: LnListTest.java; \
 $(JAVAC) -cp .::./../Library.jar LnListTest.java
 ##################################################################
+test:: \
+QueenPuzzleTest
+QueenPuzzleTest: \
+QueenPuzzleTest.class ; \
+$(JAVA) -cp .::./../Library.jar QueenPuzzleTest
+QueenPuzzleTest.class: \
+QueenBoard.java QueenPuzzleTest.java; \
+$(JAVAC) -cp .::./../Library.jar QueenPuzzleTest.java
+##################################################################
+test:: \
+MyStackListTest
+MyStackListTest: \
+MyStackListTest.class ; \
+$(JAVA) -cp .::./../Library.jar MyStackListTest
+MyStackListTest.class: MyStackListTest.java; \
+$(JAVAC) -cp .::./../Library.jar MyStackListTest.java
+##################################################################
+test:: \
+MyStackArrayTest
+MyStackArrayTest: \
+MyStackArrayTest.class ; \
+$(JAVA) -cp .::./../Library.jar MyStackArrayTest
+MyStackArrayTest.class: MyStackArrayTest.java; \
+$(JAVAC) -cp .::./../Library.jar MyStackArrayTest.java
+##################################################################
 ######################## end-of(Makefile) ########################
 ##################################################################
